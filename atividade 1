@@ -1,0 +1,80 @@
+#include <stdio.h>
+
+int main()
+{
+    int numero, media, opcao, media2 = 0, maior = 0, soma2 = 0, divisor, par, soma = 0;
+    
+    do{
+        printf("Por favor, comece pelo 1! \n");
+        printf("1 - Opcao 1 \n");
+        printf("2 - Opcao 2 \n");
+        printf("3 - Opcao 3 \n");
+        printf("4 - Opcao 4 \n");
+        printf("5 - Opcao 5 \n");
+        printf("6 - Opcao 6 \n");
+        printf("0 - Sair \n");
+        scanf( "%d", &opcao );
+        if ( opcao == 1 ) {
+            printf("Opcao 1 escolhida\n");
+            printf("Por favor, digite um número\n");
+            scanf("%i", &numero);
+            while (numero !=0){    
+                divisor++;
+                soma = soma + numero;
+                media = (soma)/divisor;
+                if (numero % 2 == 0) {
+                par++;}
+                if (numero % 2 == 0) {
+                soma2 = soma2 + numero;
+                }
+                media2 = soma2/par;
+                if (numero > maior) {
+                maior = numero;
+                }
+                
+            printf("Por favor, digite outro número:\n");
+            scanf("%i", &numero);}
+            
+            printf("Por favor, escolha outra opcao! \n");
+            printf("1 - Opcao 1 \n");
+            printf("2 - Opcao 2 \n");
+            printf("3 - Opcao 3 \n");
+            printf("4 - Opcao 4 \n");
+            printf("5 - Opcao 5 \n");
+            printf("6 - Opcao 6 \n");
+            printf("0 - Sair \n");
+            scanf( "%d", &opcao );
+                if ( opcao == 2){   
+            printf("Opcao 2 escolhida!\n");
+            printf("A soma é: %i\n", soma);
+                    
+                }
+            
+                if ( opcao == 3){   
+            printf("Opcao 3 escolhida!\n");
+            printf("A media é: %i\n", media);
+                    
+                }
+                if (opcao == 4){
+            printf("Opcao 4 escolhida!\n");
+            printf("A quantidade numeros pares é: %i\n", par);
+                    
+                }
+            
+                if (opcao == 5){
+            printf("Opcao 5 escolhida!\n");
+            printf("A media de numeros pares é: %i\n", media2);
+            
+                }
+                
+                if (opcao == 6){
+            printf("Opcao 6 escolhida!\n");
+            printf("O maior número é: %i\n", maior);
+            
+                }
+    
+            }
+        } 
+     while ( opcao != 0 && opcao !=1 );
+    return 0;
+}
